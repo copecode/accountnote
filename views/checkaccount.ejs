@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查账</title>
+    <style>
+            * {
+      box-sizing: border-box;
+      line-height: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 60%;
+      margin:0 auto;
+    }
+    h1{
+      width:100%;
+      margin:0 auto
+    }
+    .accounts li{
+      list-style-type: none;
+      border: 1px solid pink;
+      border-radius: 0.3rem;
+      margin: 1rem 0;
+      overflow: hidden;
+    }
+    .accounts li span{
+      border-radius: 0.2rem;
+      height: 1.5rem;
+
+    }
+   
+    li p.time.spend {
+      background-color: pink;
+      height: 1.5rem;
+    }
+
+    li p.time.income {
+      background-color: lightgreen;
+
+    }
+
+    li span.type.spend {
+      background-color: goldenrod;
+    }
+
+    li span.type.income {
+      background-color: greenyellow;
+    }
+    li span.type {
+      width: 3rem;
+      text-align: center;
+    }
+
+    div.account {
+      display: grid;
+      grid-template-columns: 6fr 2fr 2fr 2fr;
+      margin:0.2rem 1rem;
+
+    }
+    
+    .accounts li .btn{
+      color:red;
+      width: 2rem;
+      align-self: right;
+      justify-self: end;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>查账</h1>
+    <ul class="accounts">
+
+      <% data.forEach( item => { %>
+      <li>
+        <p class="time <%= item.type === '1'? 'income' :'spend' %>"><%= item.time %></p>
+        <div class="account">
+          <span class="reason spend"><%= item.reason %></span>
+          <span class="type <%= item.type === '1'? 'income' :'spend' %>"><%= item.type === '1'? '收入' :'支出' %></span>
+          <span class="value"> <%= item.value %> 元</span>
+          <a href="/del<%= item.id %>" class="btn"><button >X</button></a>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "accounts": [
+    {
+      "id": "M07UX_sZt",
+      "reason": "工资",
+      "time": "2024-12-21",
+      "type": "1",
+      "value": "100000",
+      "ps": "发工资"
+    },
+    {
+      "id": "bXB0DXXVo",
+      "reason": "买衣服",
+      "time": "",
+      "type": "2",
+      "value": "100",
+      "ps": "衣服"
+    },
+    {
+      "id": "Y-BZdRbDF",
+      "reason": "买电脑",
+      "time": "2024-12-19",
+      "type": "1",
+      "value": "10000",
+      "ps": "买了一台电脑"
+    }
+  ]
+}
