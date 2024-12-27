@@ -6,7 +6,7 @@ var logger = require('morgan');
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 
-var indexRouter = require('./routes/web/index');
+var indexRouter = require('./routes/web/index'); 
 
 var app = express();
 
